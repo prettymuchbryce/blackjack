@@ -5,8 +5,8 @@ var Utils = function() {
 	* Gets the value of the hand, swapping ace values with 1 until a bust, or a hand under 21 is found.
 	* Potentially mutates the value of aces in the 'cards' input list.
 	*
-	* @param {Array} cards The list of cards to get the value of.
-	* @return {Number} The value of the hand.
+	* @param {Array} cards The list of cards to get the total value of.
+	* @return {Number} The total value of the cards given in the cards input.
 	**/
 	this.getHandValue = function(cards) {
 		var valueList = _.map(cards, function(card) { return card.value });

@@ -30,7 +30,7 @@ var Game = function(gameId) {
 	};
 
 	/**
-	* Deal the cards to the players. 
+	* Deal the initial cards to the players. 
 	* Also checks if the dealer has 21.
 	**/
 	var deal = function() {
@@ -72,7 +72,7 @@ var Game = function(gameId) {
 			return;
 		}
 
-		//Dealer plays
+		//Dealer plays until the value of his cards are >= 17
 		while (Utils.getHandValue(dealerCards) < 17) {
 			var card = deck.getNextCard();
 			publicState.dealer.faceUpCards.push(card);

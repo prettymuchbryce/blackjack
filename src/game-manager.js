@@ -4,14 +4,16 @@ var hashids = new Hashids("Some Salt Here");
 
 /**
 * GameManager manages all the games. It stores each game by id.
-* It is responsible for creating and storing new games in application memory.
+* It is responsible for creating, keeping track of, and storing new games in application memory.
 **/
 var GameManager = function() {
 	var games = {};
 	var gameCounter = 0;
 
 	/**
-	* Creates a new game
+	* Creates a new game, and returns it.
+	*
+	* @return {Object} A new game object.
 	**/
 	this.createGame = function() {
 		var game = new Game(getGameId());

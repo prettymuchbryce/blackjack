@@ -30,11 +30,13 @@ Player may start a game, and choose to hit or stand.
 `curl 'http://127.0.0.1:3000/new' -H 'Content-Type: application/json'`
 
 ### Hit (POST)
+
 *Use the id you received from creating a new game to hit and stand.*
 
 `curl 'http://127.0.0.1:3000/hit' -H 'Content-Type: application/json' -d '{ "id": "1z" }'`
 
 ### Stand (POST)
+
 *Use the id you received from creating a new game to hit and stand.*
 
 `curl 'http://127.0.0.1:3000/stand' -H 'Content-Type: application/json' -d '{ "id": "1z" }'`

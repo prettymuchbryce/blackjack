@@ -3,14 +3,13 @@ var GameManager = require('./game-manager.js');
 
 /**
 * Router interfaces with requests. 
-* Router takes user input, manipulates game objects based on that input, and responds to the user.
+* Router takes user input, manipulates Game objects based on that input, and responds to the user.
 **/
 var Router = function() {
 	this.init = function(app) {
 		app.get('/new', function(req, res) {
 			var game = GameManager.createGame();
 			var state = game.getPublicState();
-			game.init();
 			res.send(state, 200);
 
 			if (state.isGameOver) {

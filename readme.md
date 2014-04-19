@@ -4,9 +4,10 @@ A simple API which allows a user to play blackjack against a dealer.
 
 ## Installation
 
-1. Pull code
-2. `npm install`
-3. `npm start`
+1. `git clone git@github.com:prettymuchbryce/blackjack.git`
+2. `cd blackjack`
+3. `npm install`
+4. `npm start`
 
 ## Tests
 

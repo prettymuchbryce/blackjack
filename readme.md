@@ -10,7 +10,7 @@ Player may start a game, then choose to hit or stand.
 - There is no insurance
 - There is no splitting
 - There is no betting
-- 
+
 ## Installation
 
 1. `git clone git@github.com:prettymuchbryce/blackjack.git`

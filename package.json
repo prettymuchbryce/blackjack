@@ -1,0 +1,21 @@
+{
+  "name": "blackjack",
+  "version": "0.0.0",
+  "description": "HTTP API for playing blackjack",
+  "scripts": {
+    "test": "mocha test",
+    "start": "node ./src/app.js"
+  },
+  "author": "Bryce Neal",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.0.0",
+    "underscore": "^1.6.0",
+    "body-parser": "^1.0.2",
+    "hashids": "^0.3.3"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "chai": "^1.9.1"
+  }
+}

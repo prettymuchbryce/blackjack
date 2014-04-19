@@ -2,19 +2,19 @@
 
 A simple API which allows a user to play blackjack against a dealer.
 
-# Installation
+## Installation
 
 1. Pull code
 2. `npm install`
 3. `npm start`
 
-# Tests
+## Tests
 
 Requires Mocha, and Chai.
 
 `npm test`
 
-# Features
+## Features
 
 Player may start a game, and choose to hit or stand.
 
@@ -23,18 +23,18 @@ Player may start a game, and choose to hit or stand.
 - There is no splitting
 - There is no betting
 
-# Curl Requests
+## Curl Requests
 
-## New Game (GET)
+### New Game (GET)
 
-curl 'http://127.0.0.1:3000/new' -H 'Content-Type: application/json'
+`curl 'http://127.0.0.1:3000/new' -H 'Content-Type: application/json'`
 
-**Use the id you received from creating a new game to hit and stand.**
+### Hit (POST)
+*Use the id you received from creating a new game to hit and stand.*
 
-## Hit (POST)
+`curl 'http://127.0.0.1:3000/hit' -H 'Content-Type: application/json' -d '{ "id": "mp" }'`
 
-curl 'http://127.0.0.1:3000/hit' -H 'Content-Type: application/json' -d '{ "id": "mp" }'
+### Stand (POST)
+*Use the id you received from creating a new game to hit and stand.*
 
-## Stand (POST)
-
-curl 'http://127.0.0.1:3000/stand' -H 'Content-Type: application/json' -d '{ "id": "mp" }'
+`curl 'http://127.0.0.1:3000/stand' -H 'Content-Type: application/json' -d '{ "id": "mp" }'`

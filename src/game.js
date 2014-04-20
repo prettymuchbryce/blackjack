@@ -10,11 +10,13 @@ var Game = function(gameId) {
 	var deck = new Deck();
 	var dealerCards = [];
 	var publicState = {};
+	var createdAt = undefined;
 
 	/**
 	* Initialize the game.
 	**/
 	this.init = function() {
+		createdAt = new Date();
 		publicState = {};
 		publicState.id = id;
 		publicState.isGameOver = false;
@@ -110,11 +112,21 @@ var Game = function(gameId) {
 	/**
 	* Returns the game id.
 	*
-	* @return {Number} id The game id
+	* @return {Number} The game id
 	**/
 	this.getId = function() {
 		return id;
 	};
+
+
+	/**
+	* Returns when the game was created.
+	*
+	* @return {Object} A date object.
+	**/
+	this.getCreatedAt = function() {
+		return createdAt;
+	}
 
 	/**
 	* Indicate that the player wishes to hit.

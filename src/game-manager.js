@@ -1,12 +1,16 @@
+var _ = require('underscore');
 var Game = require('./game.js');
-var Hashids = require("hashids");
-var hashids = new Hashids("Some Salt Here");
+var Hashids = require('hashids');
+var moment = require('moment');
+var hashids = new Hashids('Some Salt Here');
+var ONE_HOUR = 60 * 1000 * 60;
 
 /**
 * GameManager manages all the games. It stores each game by id.
 * It is responsible for creating, keeping track of, and storing new games in application memory.
 **/
 var GameManager = function() {
+	var that = this;
 	var games = {};
 	var gameCounter = 0;
 
@@ -47,7 +51,21 @@ var GameManager = function() {
 	var getGameId = function() {
 		gameCounter++;
 		return hashids.encrypt(gameCounter);
-	}
+	};
+
+	/**
+	* Game timer. Deletes games which have been inactive for over an hour.
+	**/
+	var gameTimer = function() {
+		var now = new Date();
+		_.each(games, function(game) {
+			if (moment(now).diff(game.getCreatedAt()) > ONE_HOUR) {
+				that.removeGame(game);
+			}
+		});
+	};
+
+	setInterval(gameTimer, ONE_HOUR);
 };
 
 module.exports = new GameManager();

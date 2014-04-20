@@ -1,4 +1,4 @@
-# Basic BlackJack API
+# Blackjack Web Service
 
 A simple API which allows a user to play blackjack against a dealer.
 

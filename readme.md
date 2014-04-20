@@ -11,6 +11,15 @@ Player may start a game, then choose to hit or stand.
 - There is no splitting
 - There is no betting
 
+## Stack
+
+This service is written in node.js. It also uses a few node modules.
+
+- **express** - web framework
+- **underscore** - functional programming helpers
+- **hashids** - generates unique string ids
+- **moment** - offers some date/time helpers
+
 ## Installation
 
 1. `git clone git@github.com:prettymuchbryce/blackjack.git`
